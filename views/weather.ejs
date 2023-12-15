@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Information</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            margin: 50px;
+        }
+
+        .weather-container {
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #fff;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="weather-container">
+        <h1>Current Weather</h1>
+        <p>Temperature: <%= resPonse.current.temp_c %>°C</p>
+        <p>Condition: <%= resPonse.current.condition.text %></p>
+        <p>Humidity: <%= resPonse.current.humidity %>%</p>
+        <img src="<%= resPonse.current.condition.icon %>">
+    </div>
+</body>
+</html>
